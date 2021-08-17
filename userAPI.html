@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userAPI.css">
+    <title>User API</title>
+</head>
+<body>
+    <h1>Random User API</h1>
+    <div class="menuContainer">
+        <menu class="menuBtns">
+            <h3 class="addBtn add">Adicionar utilizador</h3>
+            <h3 class="editingBtn editor">Cancelar edição</h3>
+            <form class="write">
+
+                <div id="writeDiv" class="writeDiv">
+                    <input type="radio" id="inputFemale" name="gender" value="female">
+                    <label for="inputFemale">
+                        <p class="writeGenderF unselected">F</p>
+                    </label>
+
+                    <input type="radio" id="inputMale" name="gender" value="male">
+                    <label for="inputMale">
+                        <p class="writeGenderM unselected">M</p>
+                    </label>
+                </div>
+
+                <input type="text" placeholder="Primeiro nome" class="input-name">
+                <input type="text" placeholder="Ultimo nome" class="input-name">
+                <input type="number" class="input-age" placeholder="Idade">
+                <input type="text" id="input-img" class="input-img" class="input-name" value="image.jpg">
+                <input type="text" class="input-city" placeholder="Cidade">
+                <input type="text" class="input-country" placeholder="País">
+                <input type="tel" placeholder="Nº Telefone" class="input-tel">
+                <input type="email" class="input-email" placeholder="E-mail">
+                <input type="text" class="input-nat" placeholder="Nat" maxlength="2">
+                
+                <img id="plusIcon" src="plus.png">
+                <img id="checkIcon" class="hide" src="check.png">
+            </form>
+        </menu>
+        <menu>
+            <form class="filtro">
+                <label for="filtrar">Filtrar por :</label>
+                <select name="filtrar" class="select">
+                  <option value="todos">Todos</option>
+                  <option value="idadeA">Idade Ascendente</option>
+                  <option value="idadeD">Idade Descendente</option>
+                  <option value="genero">Género</option>
+                </select>
+            </form>
+            <aside id="filtro-genero" class="filtro-genero hide">
+                <input type="radio" id="filterFemale" name="filter" value="female" class="radio">
+                <label for="filterFemale" id="filterLabelF" class="filterLabel">
+                    <p class="genderF filterF inactive">F</p>
+                </label>
+                <input type="radio" id="filterMale" name="filter" value="male" class="radio">
+                <label for="filterMale" id="filterLabelM" class="filterLabel">
+                    <p class="genderM filterM inactive">M</p>
+                </label>
+            </aside>
+        </menu>
+    </div>
+    <section id="container" class="container"></section>
+<script src="userAPI.js"></script>
+</body>
+</html>
